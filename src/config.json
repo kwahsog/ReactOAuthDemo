@@ -1,0 +1,4 @@
+{
+    "GOOGLE_CLIENT_ID": "",
+    "SERVER_URL": "http://localhost:4000/api/v1/auth/google"
+}

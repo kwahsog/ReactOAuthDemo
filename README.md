@@ -66,3 +66,9 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+### Google OAuth:
+
+Simpliest possible Google OAuth React example. Credit:
+
+https://medium.com/@alexanderleon/implement-social-authentication-with-react-restful-api-9b44f4714fa
