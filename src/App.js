@@ -19,19 +19,22 @@ class App extends Component {
     };
 
     googleResponse = (response) => {
-        const tokenBlob = new Blob([JSON.stringify({ access_token: response.accessToken }, null, 2)], { type: 'application/json' });
+        //const tokenBlob = new Blob([JSON.stringify({ access_token: response.accessToken }, null, 2)], { type: 'application/json' });
+        const token = JSON.stringify({ access_token: response.accessToken });
         const options = {
             method: 'POST',
-            body: tokenBlob,
+            body: token,
             mode: 'cors',
             cache: 'default'
         };
+
+        ///////TODO: Configure fetch to properly parse json reply. to match token.
         fetch(config.SERVER_URL, options).then(r => {
             const token = r.headers.get('x-auth-token');
             r.json().then(user => {
-                if (token) {
-                    this.setState({ isAuthenticated: true, user, token })
-                }
+                    //this.setState({ isAuthenticated: true, user, token })
+                    this.setState({ isAuthenticated: true, user, token });
+
             });
         })
     };
